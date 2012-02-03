@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ground.name %>
+</p>
+
+<p>
+  <b>Sport:</b>
+  <%= @ground.sport %>
+</p>
+
+<p>
+  <b>Access:</b>
+  <%= @ground.access %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @ground.description %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @ground.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @ground.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @ground.state %>
+</p>
+
+<p>
+  <b>Zip code:</b>
+  <%= @ground.zip_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_ground_path(@ground) %> |
+<%= link_to 'Back', grounds_path %>
