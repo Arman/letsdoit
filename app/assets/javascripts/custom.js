@@ -1,6 +1,6 @@
 $(document).ready(function() 
     { 
-        $("#listBusinesses")
+        $("#listVenues")
         .tablesorter({widthFixed: true, positionFixed: false, widgets: ['zebra']}) 
         .tablesorterPager({container: $("#pager")}); 
     } 

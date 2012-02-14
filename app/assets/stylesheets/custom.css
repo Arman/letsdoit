@@ -71,17 +71,17 @@
 /* Specific jumbotrons
 ------------------------- */
 /* welcome page */
-.masthead {
-  background-color: #FF6600;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF6633), to(#FF6600));
-  background-image: -webkit-linear-gradient(#FF6633, #FF6600);
-  background-image: -moz-linear-gradient(#FF6633, #FF6600);
-  background-image: -o-linear-gradient(top, #FF6633, #FF6600);
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#FF6633), to(#FF6600));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6633', endColorstr='#FF6600', GradientType=0); /* IE8 and down */
-}
 
+.masthead {
+  background-color: #049cd9;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
+  background-image: -webkit-linear-gradient(#004D9F, #049cd9);
+  background-image: -moz-linear-gradient(#004D9F, #049cd9);
+  background-image: -o-linear-gradient(top, #004D9F, #049cd9);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#004D9F), to(#049cd9));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#004D9F', endColorstr='#049cd9', GradientType=0); /* IE8 and down */
+}
 
 input[type=image], input[type=image]:hover {
   width: auto;
@@ -92,17 +92,17 @@ input[type=image], input[type=image]:hover {
 }
 
 .topbar-inner, .topbar .fill {
-  background-color: #e9e9e9;
-  background-color: #e9e9e9;
+  background-color: #FF9900;
+  background-color: #FF9900;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#e0e0e0), to(#e9e9e9));
-  background-image: -moz-linear-gradient(top, #e0e0e0, #e9e9e9);
-  background-image: -ms-linear-gradient(top, #e0e0e0, #e9e9e9);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0e0e0), color-stop(100%, #e9e9e9));
-  background-image: -webkit-linear-gradient(top, #e0e0e0, #e9e9e9);
-  background-image: -o-linear-gradient(top, #e0e0e0, #e9e9e9);
-  background-image: linear-gradient(top, #e0e0e0, #e9e9e9);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#e0e0e0', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#FF6633), to(#FF9900));
+  background-image: -moz-linear-gradient(top, #FF6633, #FF9900);
+  background-image: -ms-linear-gradient(top, #FF6633, #FF9900);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF6633), color-stop(100%, #FF9900));
+  background-image: -webkit-linear-gradient(top, #FF6633, #FF9900);
+  background-image: -o-linear-gradient(top, #FF6633, #FF9900);
+  background-image: linear-gradient(top, #FF6633, #FF9900);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9900', endColorstr='#FF6633', GradientType=0);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -118,15 +118,15 @@ input[type=image], input[type=image]:hover {
 }
 
 .topbar h3 a:hover, .topbar .brand:hover,.topbar .brand a:hover, .topbar ul .active > a {
-  color: #FF6600;
+  color: #FF9900;
   text-decoration: none;
 }
 
 .topbar p a:hover {
-  color: #FF6600;
+  color: #FF9900;
 }
 .topbar div > ul a:hover, .nav a:hover {
-  color: #FF6600;
+  color: #FF9900;
 }
 
 
@@ -196,7 +196,7 @@ span {
 }
 
 footer {
-  background-color: #e9e9e9;
+  background-color: #FFCC99;
 }
 
 .centered {

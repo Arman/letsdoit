@@ -50,6 +50,28 @@
 				</div>
 
 				<div class="clearfix">
+					<%= f.label :gender, :for => "xlInput" %>
+				 	<div class="input">	 	
+				    <div class="pull-left">
+				      <div class="input-prepend">
+				        <label class="add-on">
+				          <%= f.radio_button :gender, true %>
+				        </label>
+				        <input class="small uneditable-input" name="prependedInput2" id="prependedInput2" size="20" type="text" value="Female" >
+				      </div>
+				    </div>
+				    <div class="pull-left">
+				      <div class="input-prepend">
+				        <label class="add-on">
+				          <%= f.radio_button :gender, false %>
+				        </label>
+				        <input class="small uneditable-input" name="prependedInput2" id="prependedInput2" size="20" type="text" value="Male" >
+				      </div>
+				    </div>
+				  </div>
+			  </div>
+
+				<div class="clearfix">
 				 	<%= f.label :birthdate, :for => "xlInput" %>
 				 	<div class="input">	 	
 				 	  <%= f.date_select :birthdate , { :start_year => 1900, :order => [:month, :day, :year], :include_blank => true }, { :class => 'mini' } %>
@@ -77,7 +99,7 @@
 		</div>
 		<div class="span5">
 			<br/><br/><br/><br/>
-      <%= image_tag("three-doors.png") %>
+      <%= image_tag("golf_ball_on_green.jpg") %>
     </div>
 
 	</div>
