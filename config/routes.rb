@@ -1,7 +1,17 @@
 Letsdoit::Application.routes.draw do
   devise_for :users
 
-  resources :grounds
+  resources :venues
+
+  resources :categories
+
+  resources :searches
+
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
+  match '/thanks',  :to => 'pages#thanks'
+  match '/tour',  :to => 'pages#tour'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +62,7 @@ Letsdoit::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

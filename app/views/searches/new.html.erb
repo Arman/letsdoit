@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="row">
+    <div class="span16">
+    <h3> Your source for contractors in San Francisco Bay Area! </h3>
+    </div>
+  </div>
+
+  <%= render :partial => "searches/form"%>
+
+  <div class="row"><div class="span16">&nbsp</div></div>
+  <div class="row">
+    <div class="span16">
+      <h3><%= @list_header %> </h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span16">
+      <% if @businesses.empty? then %>
+        <div class="row"><div class="span16">No businesses matched your search. Try another search or <%= link_to 'add a new business', new_business_path %></div>
+      <% else %>
+        <div class="row"><div class="span16"><%= gmaps4rails(@json) if !params[:search_near].blank? %></div></div>
+        <div class="row"><div class="span16">&nbsp</div></div>
+        <div class="row">
+          <div class="span16">
+           <table id="listBusinesses" class="tablesorter">
+              <%= render 'businesses/table_header' %>
+              <tbody>
+                <%= render :partial => "businesses/table_row", :collection => @businesses %>
+
+              </tbody>
+          </table>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%=  render :partial => '/shared/tablesorter_pager'%>
+  
+</div>
+ 
+
+
+
+

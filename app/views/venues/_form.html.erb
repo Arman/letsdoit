@@ -1,0 +1,72 @@
+<%= form_for(@venue) do |f| %>
+  <% if @venue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@venue.errors.count, "error") %> prohibited this venue from being saved:</h2>
+
+      <ul>
+      <% @venue.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="clearfix">
+    <%= f.label :name, :for => "xlInput" %>
+     <div class="input">
+      <%= f.text_field :name %>
+    </div>
+  </div> 
+  <div class="clearfix">
+    <%= f.label :address_line_1, :for => "xlInput" %>
+     <div class="input">
+      <%= f.text_field :address_line_1 %>
+    </div>
+  </div> 
+  <div class="clearfix">
+    <%= f.label :address_line_2, :for => "xlInput" %>
+     <div class="input">
+      <%= f.text_field :address_line_2 %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :city, :for => "xlInput" %>
+     <div class="input">
+      <%= f.text_field :city %>
+    </div>
+  </div> 
+  <div class="clearfix">
+    <%= f.label :state, :for => "xlInput" %>
+     <div class="input">
+      <%= f.text_field :state %>
+    </div>
+  </div>  
+  
+  <div class="clearfix">
+    <%= f.label :description, :for => "xlInput" %>
+     <div class="input">
+      <%= f.text_area :description, :rows => '3', :class => 'xxlarge' %>
+    </div>
+  </div> 
+
+  <div class="clearfix input">
+    <% Category.order(:name).each do |category| %>
+      <div class="pull-left">
+        <div class="input-prepend">
+          <label class="add-on">
+            <%= check_box_tag "venue[category_ids][]", category.id, @venue.categories.include?(category) %>
+          </label>
+          <input class="large uneditable-input" name="prependedInput2" id="prependedInput2" size="30" type="text" value="<%= category.name %>" >
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="clearfix">
+    <div class="input">
+      <%= f.submit "Go!", :class =>"btn small primary" %>
+    </div>
+  </div>
+
+<% end %>

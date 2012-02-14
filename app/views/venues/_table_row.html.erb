@@ -1,0 +1,6 @@
+ <tr>
+     <td><%= link_to table_row.name, table_row %></td>
+     <td><%= table_row.city %></td>
+     <td><%= table_row.avg_review==0 ? "N/A" : table_row.avg_review %></td>
+     <%= !params[:search_near].blank? ? ("<td>"+ table_row.distance.round(1).to_s + "</td>").html_safe : '&nbsp'.html_safe %>
+</tr>

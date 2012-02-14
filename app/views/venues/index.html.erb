@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="span16">
+      <h3> Listing all venues! </h3>
+    </div>
+  </div>
+
+  <%= render :partial => "searches/form"%>
+
+  <hr/>
+
+  <div class="row">
+    <table id="listVenues" class="tablesorter">
+      <thead> 
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Phone</th>
+            <th>Url</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @venuees.each do |venue| %>
+          <tr>
+            <td><%= link_to venue.name, venue %></td>
+            <td><%= venue.address_line_1 %></td>
+            <td><%= venue.city %></td>
+            <td><%= venue.state %></td>
+            <td><%= venue.name %></td>
+            <td><%= venue.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%=  render :partial => '/shared/tablesorter_pager'%>
+  </div>
+</div>

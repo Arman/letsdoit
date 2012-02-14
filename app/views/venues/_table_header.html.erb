@@ -1,0 +1,8 @@
+ <thead> 
+  <tr>
+    <th>Venue</th>
+    <th>City</th>
+    <th>Average</th>
+    <%= !params[:search_near].blank? ? "<th>Distance</th>".html_safe : '&nbsp'.html_safe %>
+  </tr>
+</thead>

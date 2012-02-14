@@ -1,0 +1,24 @@
+<div class="pull-right">
+  <% if user_signed_in? %>
+    <p>
+      <font class="font_xs" color="black"> <strong> <%= current_user.email %> </strong></font>
+      &nbsp
+      <%= link_to(image_tag("config.png"),edit_user_registration_path('user'), :rel => "twipsy", :"data-original-title" => "My Account" )%>
+      &nbsp
+      <%= link_to(image_tag("sign-out.png"),destroy_user_session_path, :method => :delete, :rel => "twipsy", :"data-original-title" => "Sign Out" )%>
+    </p>
+  <% else %>
+    <%= form_for("user", :url => user_session_path) do |f| %>
+      <%= link_to(image_tag("sign-up.png"),new_user_registration_path, :rel => "twipsy", :"data-original-title" => "Sign Up" )%>
+      &nbsp&nbsp
+      <%= f.text_field :email, :class => "span2" %>
+      <%= f.password_field :password, :class => "span2" %>
+      <%= submit_tag 'Sign in', :src => '/assets/sign-in.png', :type => 'image', :rel => "twipsy", :"data-original-title" => "Sign In" %>
+      &nbsp&nbsp
+      <%= link_to(image_tag("login.png"),new_password_path('user'), :rel => "twipsy", :"data-original-title" => "Forgot Password" )%>
+    <% end %>
+  <% end %>
+
+
+</div>
+
