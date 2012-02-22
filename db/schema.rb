@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120217191356) do
+ActiveRecord::Schema.define(:version => 20120217185937) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -20,30 +20,16 @@ ActiveRecord::Schema.define(:version => 20120217191356) do
     t.datetime "updated_at"
   end
 
-  create_table "event_series", :force => true do |t|
-    t.integer  "frequency",  :default => 1
-    t.string   "period",     :default => "weeks"
-    t.datetime "starttime"
-    t.datetime "endtime"
-    t.boolean  "all_day",    :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "events", :force => true do |t|
     t.string   "title"
-    t.datetime "starttime"
-    t.datetime "endtime"
-    t.boolean  "all_day",         :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
     t.text     "description"
-    t.integer  "event_series_id"
     t.integer  "venue_id"
     t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
-
-  add_index "events", ["event_series_id"], :name => "index_events_on_event_series_id"
 
   create_table "searches", :force => true do |t|
     t.string   "keywords"
