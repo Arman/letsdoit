@@ -51,16 +51,15 @@
 
   <div class="clearfix">
     <%= f.label :starts_at, :for => "xlInput" %>
-    <div class="input"> 
-      <input class="hasdatetimepicker" id="activity[starts_at]" name="activity_starts_at" type="text">      
+    <div class="input">
+      <%= f.text_field :starts_at, :class => "hasdatetimepicker" %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label :ends_at, :for => "xlInput" %>
     <div class="input"> 
-      <input class="hasdatetimepicker" id="activity[ends_at]" name="activity_ends_at" type="text">      
-    </div>
+      <%= f.text_field :ends_at, :class => "hasdatetimepicker" %>  </div>
   </div>
 
   <div class="clearfix">
