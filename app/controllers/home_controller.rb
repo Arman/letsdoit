@@ -8,7 +8,9 @@ class HomeController < ApplicationController
 
     @categories = Category.order(:name)
 
-    @new_venues = Venue.order(:created_at).take(12)
+    @venues = Venue.order(:created_at).take(12)
+
+    @activities = Activity.order(:created_at).take(12)
   
   end
 

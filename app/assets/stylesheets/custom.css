@@ -92,17 +92,17 @@ input[type=image], input[type=image]:hover {
 }
 
 .topbar-inner, .topbar .fill {
-  background-color: #FF9900;
-  background-color: #FF9900;
+  background-color: #FFCC66;
+  background-color: #FFCC66;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#FF6633), to(#FF9900));
-  background-image: -moz-linear-gradient(top, #FF6633, #FF9900);
-  background-image: -ms-linear-gradient(top, #FF6633, #FF9900);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF6633), color-stop(100%, #FF9900));
-  background-image: -webkit-linear-gradient(top, #FF6633, #FF9900);
-  background-image: -o-linear-gradient(top, #FF6633, #FF9900);
-  background-image: linear-gradient(top, #FF6633, #FF9900);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9900', endColorstr='#FF6633', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#FFCC99), to(#FFCC66));
+  background-image: -moz-linear-gradient(top, #FFCC99, #FFCC66);
+  background-image: -ms-linear-gradient(top, #FFCC99, #FFCC66);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFCC99), color-stop(100%, #FFCC66));
+  background-image: -webkit-linear-gradient(top, #FFCC99, #FFCC66);
+  background-image: -o-linear-gradient(top, #FFCC99, #FFCC66);
+  background-image: linear-gradient(top, #FFCC99, #FFCC66);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCC66', endColorstr='#FFCC99', GradientType=0);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -118,15 +118,15 @@ input[type=image], input[type=image]:hover {
 }
 
 .topbar h3 a:hover, .topbar .brand:hover,.topbar .brand a:hover, .topbar ul .active > a {
-  color: #FF9900;
+  color: #FFCC66;
   text-decoration: none;
 }
 
 .topbar p a:hover {
-  color: #FF9900;
+  color: #FFCC66;
 }
 .topbar div > ul a:hover, .nav a:hover {
-  color: #FF9900;
+  color: #FFCC66;
 }
 
 
@@ -196,7 +196,11 @@ span {
 }
 
 footer {
-  background-color: #FFCC99;
+  background-color: #FFCC66;
+}
+
+.search {
+  background-color: #FFCC66;
 }
 
 .centered {
@@ -204,4 +208,11 @@ footer {
 }
 
 
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
 

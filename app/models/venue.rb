@@ -21,6 +21,8 @@ class Venue < ActiveRecord::Base
   has_many :venues_categories
   has_many :categories, :through => :venues_categories
   accepts_nested_attributes_for :venues_categories
+
+  has_many :activities
                   
   validates :name,  :presence => true,
                     :length   => { :maximum => 150 }

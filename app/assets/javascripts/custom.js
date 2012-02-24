@@ -31,6 +31,20 @@ $(".alert-message").alert()
 
 $('#topbar').scrollSpy()
 
+$(function() {
+        $( "#datepicker, #datepicker2" ).datepicker();
+    });
+
+$(function() {
+        $( "#datetimepicker" ).datetimepicker();
+    });
+
+$(function() {
+        $( ".hasdatetimepicker" ).datetimepicker();
+    });
+
+
+
 
 function moveEvent(event, dayDelta, minuteDelta, allDay){
     jQuery.ajax({

@@ -1,4 +1,8 @@
 Letsdoit::Application.routes.draw do
+  resources :activities
+
+  resources :events
+
   devise_for :users
 
   resources :venues
