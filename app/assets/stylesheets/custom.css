@@ -91,18 +91,23 @@ input[type=image], input[type=image]:hover {
   background-color: transparent;
 }
 
+.topbar input, .topbar input:hover {
+  color: #333333;
+  color: rgba(51, 51, 51, 1);
+ }
+
 .topbar-inner, .topbar .fill {
   background-color: #FFCC66;
   background-color: #FFCC66;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#FFCC99), to(#FFCC66));
-  background-image: -moz-linear-gradient(top, #FFCC99, #FFCC66);
-  background-image: -ms-linear-gradient(top, #FFCC99, #FFCC66);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFCC99), color-stop(100%, #FFCC66));
-  background-image: -webkit-linear-gradient(top, #FFCC99, #FFCC66);
-  background-image: -o-linear-gradient(top, #FFCC99, #FFCC66);
-  background-image: linear-gradient(top, #FFCC99, #FFCC66);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCC66', endColorstr='#FFCC99', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#FFCC65), to(#FFCC66));
+  background-image: -moz-linear-gradient(top, #FFCC65, #FFCC66);
+  background-image: -ms-linear-gradient(top, #FFCC65, #FFCC66);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFCC65), color-stop(100%, #FFCC66));
+  background-image: -webkit-linear-gradient(top, #FFCC65, #FFCC66);
+  background-image: -o-linear-gradient(top, #FFCC65, #FFCC66);
+  background-image: linear-gradient(top, #FFCC65, #FFCC66);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFCC66', endColorstr='#FFCC65', GradientType=0);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -118,15 +123,15 @@ input[type=image], input[type=image]:hover {
 }
 
 .topbar h3 a:hover, .topbar .brand:hover,.topbar .brand a:hover, .topbar ul .active > a {
-  color: #FFCC66;
+  color: #333333;
   text-decoration: none;
 }
 
 .topbar p a:hover {
-  color: #FFCC66;
+  color: #333333;
 }
 .topbar div > ul a:hover, .nav a:hover {
-  color: #FFCC66;
+  color: #333333;
 }
 
 
@@ -216,3 +221,62 @@ footer {
 .ui-timepicker-div td { font-size: 90%; }
 .ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
 
+
+.card {
+  position: relative;
+  padding: 7px 15px;
+  margin-bottom: 18px;
+  color: #404040;
+  background-color: #eedc94;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fceec1), to(#eedc94));
+  background-image: -moz-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -ms-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fceec1), color-stop(100%, #eedc94));
+  background-image: -webkit-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -o-linear-gradient(top, #fceec1, #eedc94);
+  background-image: linear-gradient(top, #fceec1, #eedc94);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceec1', endColorstr='#eedc94', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #eedc94 #eedc94 #e4c652;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.card .close {
+  margin-top: 1px;
+  *margin-top: 0;
+}
+.card a {
+  font-weight: bold;
+  color: #404040;
+}
+.card.danger p a,
+.card.error p a,
+.card.success p a,
+.card.info p a {
+  color: #ffffff;
+}
+.card h5 {
+  line-height: 18px;
+}
+.card p {
+  margin-bottom: 0;
+}
+.card div {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  line-height: 28px;
+}
+.card .btn {
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}

@@ -28,4 +28,29 @@ class Activity < ActiveRecord::Base
 	validates :category_id,  :presence => true
 
 
+def self.contains_keyword(keyword)
+    if keyword.empty? || keyword.blank?
+      scoped
+    else
+      where("activities.name like ? OR activities.description like ?", "%#{keyword}%", "%#{keyword}%")
+    end
+  end
+
+  def self.in_category(category_id)
+    if category_id.empty? || category_id.blank?
+      scoped
+    else
+      joins(:category).where("categories.id = ?", category_id)
+    end
+  end
+
+  def self.near_location(location)
+    if location.empty? || location.blank? 
+      scoped
+    else
+      self.joins(:venue) & Venue.near(location, 500, :order => :distance)
+    end
+  end
+
+
 end

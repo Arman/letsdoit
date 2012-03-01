@@ -1,0 +1,7 @@
+<%= div_for(activity) do %>
+  <div class="card span10">
+    <p><%= link_to(activity.name,activity) %> organized by <%= activity.organizer.email%></p>
+    <p> from <%= activity.starts_at.to_s(:short)%> to <%= activity.ends_at.to_s(:short)%> \
+    @ <%= link_to(activity.venue.name,activity.venue) %> in <%= activity.venue.city %> <p>
+  </div>
+<% end %>
