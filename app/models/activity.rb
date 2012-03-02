@@ -48,7 +48,7 @@ def self.contains_keyword(keyword)
     if location.empty? || location.blank? 
       scoped
     else
-      self.joins(:venue) & Venue.near(location, 500, :order => :distance)
+      scoped #& Venue.near(location, 500, :order => :distance)
     end
   end
 

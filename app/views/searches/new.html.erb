@@ -17,11 +17,13 @@
   <div class="row">
     <div class="span16">
       <% if @activities.empty? then %>
-        <div class="row"><div class="span16">No activities matched your search. Try another search or <%= link_to 'add a new activity', new_activity_path %></div>
+
+        <div class="row"><div class="span16"> <%= @case %> ; No activities matched your search. Try another search or <%= link_to 'add a new activity', new_activity_path %></div>
       <% else %>
         <div class="row"><div class="span16">&nbsp</div></div>
         <div class="row">
           <div class="span16">
+            <%= @case %>
             <%= render :partial => "shared/activity", :collection => @activities %>
         </div>
         <% end %>
