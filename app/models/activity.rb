@@ -44,13 +44,23 @@ def self.contains_keyword(keyword)
     end
   end
 
-  def self.near_location(location)
+scope :near_location, lambda { |location| joins(:venues) & Venue.near(location, 50, :order => :distance) unless location.blank? }
+
+scope :by_keyword, lambda { |keyword| where(:name => keyword) unless keyword.blank? }
+
+=begin
+
+scope :near_location, lambda {
+    joins(:venues) & Venue.near(lambda, 50, :order => :distance)
+  }
+
+def self.near_location(location)
     if location.empty? || location.blank? 
       scoped
     else
-      scoped #& Venue.near(location, 500, :order => :distance)
+      Venue.near(location, 50, :order => :distance)
     end
   end
-
+=end
 
 end
